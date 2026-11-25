@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drogaria Rede Menor Preço | São João da Boa Vista - SP</title>
+    <meta name="description" content="Drogaria Rede Menor Preço em São João da Boa Vista - SP. Medicamentos, genéricos, perfumaria, fraldas, vista 360° da fachada e Disk Entrega pelo WhatsApp.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --red: #C81E1E;
+            --red-dark: #8E1515;
+            --yellow: #FACC15;
+            --yellow-hover: #FDE047;
+            --green: #15803D;
+            --green-hover: #166534;
+            --ink: #0F172A;
+            --muted: #475569;
+            --bg: #F8FAFC;
+            --card: #FFFFFF;
+            --border: #E2E8F0;
+            --transition: all 0.25s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.65;
+        }
+
+        :focus-visible {
+            outline: 3px solid #2563EB;
+            outline-offset: 3px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 10px;
+            background: var(--ink);
+            color: #FFFFFF;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            z-index: 9999;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            left: 16px;
+        }
+
+        /* Topbar */
+        .topbar {
+            background: var(--ink);
+            color: #F8FAFC;
+            padding: 10px 5%;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .topbar strong {
+            color: var(--yellow);
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--red);
+            color: #FFFFFF;
+            padding: 14px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            box-shadow: 0 6px 24px rgba(142, 21, 21, 0.28);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        .brand-meta {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 1.05rem;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+
+        .brand-city {
+            font-size: 0.78rem;
+            color: #FEE2E2;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 6px 2px;
+            border-bottom: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--yellow);
+            border-bottom-color: var(--yellow);
+        }
+
+        .btn-yellow {
+            background: var(--yellow);
+            color: #0F172A;
+            padding: 11px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.88rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            transition: var(--transition);
+        }
+
+        .btn-yellow:hover {
+            background: var(--yellow-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(125deg, #7F1D1D 0%, var(--red) 55%, #991B1B 100%);
+            color: #FFFFFF;
+            padding: 64px 5% 76px 5%;
+        }
+
+        .hero-grid {
+            max-width: 1260px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.12fr 0.88fr;
+            gap: 44px;
+            align-items: center;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(250, 204, 21, 0.16);
+            border: 1px solid rgba(250, 204, 21, 0.45);
+            color: var(--yellow);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.1rem, 4.6vw, 3.25rem);
+            font-weight: 900;
+            line-height: 1.12;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: var(--yellow);
+        }
+
+        .hero p {
+            font-size: 1.08rem;
+            color: #F8FAFC;
+            margin-bottom: 24px;
+            max-width: 560px;
+        }
+
+        .hero-hours-pill {
+            display: inline-block;
+            background: rgba(15, 23, 42, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 24px;
+            font-size: 0.92rem;
+        }
+
+        .hero-hours-pill strong {
+            color: var(--yellow);
+        }
+
+        .hero-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn-green {
+            background: var(--green);
+            color: #FFFFFF;
+            padding: 14px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-green:hover {
+            background: var(--green-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost-white {
+            background: transparent;
+            color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            padding: 12px 22px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.94rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .btn-ghost-white:hover {
+            background: #FFFFFF;
+            color: var(--red-dark);
+        }
+
+        .hero-showcase {
+            background: var(--card);
+            color: var(--ink);
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 26px 54px rgba(0, 0, 0, 0.32);
+            border-top: 6px solid var(--yellow);
+        }
+
+        /* Opção 1: fachada completa sem cortes e responsiva */
+        .hero-card-media {
+            width: 100%;
+            background: #991B1B;
+            overflow: hidden;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .hero-card-media img {
+            width: 100%;
+            height: auto;
+            max-height: 360px;
+            object-fit: contain;
+            filter: contrast(1.04) saturate(1.06);
+            image-rendering: -webkit-optimize-contrast;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero-card-media img {
+                max-height: 260px;
+            }
+        }
+
+        .photo-frame {
+            width: 100%;
+            height: 210px;
+            overflow: hidden;
+            background: #F1F5F9;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            image-rendering: -webkit-optimize-contrast;
+            display: block;
+        }
+
+        .showcase-body {
+            padding: 24px 26px;
+        }
+
+        .showcase-body h2 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--red);
+            margin-bottom: 8px;
+        }
+
+        .showcase-body p {
+            color: var(--muted);
+            font-size: 0.92rem;
+            margin-bottom: 16px;
+        }
+
+        .wa-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .wa-chip {
+            display: block;
+            text-align: center;
+            padding: 11px 12px;
+            border-radius: 10px;
+            background: #F1F5F9;
+            border: 1px solid var(--border);
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .wa-chip:hover {
+            border-color: var(--green);
+            background: #ECFDF5;
+        }
+
+        /* Seções */
+        section {
+            padding: 74px 5%;
+        }
+
+        .container {
+            max-width: 1260px;
+            margin: 0 auto;
+        }
+
+        .head {
+            text-align: center;
+            max-width: 740px;
+            margin: 0 auto 46px auto;
+        }
+
+        .eyebrow {
+            display: block;
+            color: var(--red);
+            font-weight: 800;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+
+        .head h2 {
+            font-size: clamp(1.75rem, 3.6vw, 2.4rem);
+            font-weight: 900;
+            color: var(--ink);
+            margin-bottom: 10px;
+        }
+
+        .head p {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        .happy-section {
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cards-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .happy-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .happy-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+        }
+
+        .happy-card .photo-frame {
+            height: 210px;
+        }
+
+        .happy-text {
+            padding: 20px;
+        }
+
+        .happy-text h3 {
+            font-size: 1.12rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .happy-text p {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        /* Galeria Completa da Farmácia */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .gallery-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--red);
+            box-shadow: 0 14px 28px rgba(15, 23, 42, 0.07);
+        }
+
+        .gallery-card .photo-frame {
+            height: 220px;
+        }
+
+        .gallery-body {
+            padding: 20px;
+        }
+
+        .gallery-body h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 6px;
+        }
+
+        .gallery-body p {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        /* Horário de Funcionamento */
+        .hours-box {
+            max-width: 920px;
+            margin: 0 auto;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-left: 6px solid var(--red);
+            border-radius: 18px;
+            padding: 32px;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0 18px 0;
+        }
+
+        .hours-table th,
+        .hours-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .hours-table th {
+            color: var(--ink);
+            font-weight: 800;
+        }
+
+        .hours-table td {
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .health-note {
+            background: #FFFBEB;
+            border: 1px solid #FDE68A;
+            border-left: 5px solid #D97706;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin-top: 32px;
+            font-size: 0.92rem;
+            color: #451A03;
+        }
+
+        /* Formulário LGPD */
+        .form-section {
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 44px;
+            align-items: start;
+        }
+
+        .form-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+        }
+
+        .field {
+            margin-bottom: 18px;
+        }
+
+        .field label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.92rem;
+            margin-bottom: 6px;
+        }
+
+        .field input,
+        .field textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #CBD5E1;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            background: #FFFFFF;
+        }
+
+        .field textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .consent-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 0.86rem;
+            color: var(--muted);
+        }
+
+        .consent-row input {
+            margin-top: 4px;
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        .consent-row button {
+            background: none;
+            border: none;
+            color: var(--red);
+            font-weight: 700;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: inherit;
+        }
+
+        .form-msg {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: none;
+        }
+
+        /* Mapa e Localização */
+        .loc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 44px;
+            align-items: center;
+        }
+
+        .loc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 20px 0 24px 0;
+        }
+
+        .google-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .map-wrap {
+            width: 100%;
+            height: 390px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .map-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Botão Flutuante e Arrastável do WhatsApp + Balão Inicial */
+        .wa-float-dock {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 1800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            touch-action: none;
+        }
+
+        .wa-greeting-bubble {
+            background: #FFFFFF;
+            color: var(--ink);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 10px 32px 10px 14px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            line-height: 1.35;
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.22);
+            max-width: 230px;
+            position: relative;
+            cursor: pointer;
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+
+        .wa-greeting-bubble.hidden {
+            opacity: 0;
+            transform: translateY(6px) scale(0.96);
+            pointer-events: none;
+        }
+
+        .wa-greeting-close {
+            position: absolute;
+            top: 6px;
+            right: 8px;
+            background: none;
+            border: none;
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1;
+            font-weight: 800;
+            cursor: pointer;
+            padding: 2px 4px;
+        }
+
+        .wa-greeting-close:hover {
+            color: var(--ink);
+        }
+
+        .wa-float-btn {
+            width: 62px;
+            height: 62px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: #16A34A;
+            color: #FFFFFF;
+            border: 3px solid #FFFFFF;
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.34);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: grab;
+            touch-action: none;
+            user-select: none;
+            -webkit-user-select: none;
+            transition: transform 0.16s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .wa-float-btn:hover {
+            background: #15803D;
+            transform: scale(1.05);
+        }
+
+        .wa-float-dock.dragging .wa-float-btn {
+            cursor: grabbing;
+            transform: scale(1.08);
+            box-shadow: 0 18px 36px rgba(15, 23, 42, 0.45);
+        }
+
+        .wa-float-btn svg {
+            width: 32px;
+            height: 32px;
+            pointer-events: none;
+        }
+
+        @media (max-width: 600px) {
+            .wa-float-dock {
+                right: 16px;
+                bottom: 16px;
+            }
+            .wa-greeting-bubble {
+                max-width: 185px;
+                font-size: 0.8rem;
+                padding: 8px 28px 8px 12px;
+            }
+            .wa-float-btn {
+                width: 56px;
+                height: 56px;
+            }
+            .wa-float-btn svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--ink);
+            color: #CBD5E1;
+            padding: 60px 5% 32px 5%;
+        }
+
+        .footer-grid {
+            max-width: 1260px;
+            margin: 0 auto 36px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 32px;
+        }
+
+        .footer-col h3 {
+            color: #FFFFFF;
+            font-size: 1.05rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        .footer-col p,
+        .footer-col a,
+        .footer-col button {
+            color: #CBD5E1;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .footer-col a:hover,
+        .footer-col button:hover {
+            color: var(--yellow);
+            text-decoration: underline;
+        }
+
+        .legal-strip {
+            max-width: 1260px;
+            margin: 0 auto 26px auto;
+            padding: 18px 20px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 0.84rem;
+            color: #E2E8F0;
+        }
+
+        .footer-bottom {
+            max-width: 1260px;
+            margin: 0 auto;
+            padding-top: 22px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.84rem;
+            color: #94A3B8;
+        }
+
+        /* Banner de Cookies LGPD */
+        .cookie-banner {
+            position: fixed;
+            bottom: 16px;
+            left: 16px;
+            right: 16px;
+            max-width: 1140px;
+            margin: 0 auto;
+            background: var(--ink);
+            color: #FFFFFF;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 18px 22px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .cookie-banner.show {
+            display: flex;
+        }
+
+        .cookie-text {
+            flex: 1 1 320px;
+            font-size: 0.88rem;
+            color: #E2E8F0;
+        }
+
+        .cookie-text button {
+            background: none;
+            border: none;
+            color: var(--yellow);
+            text-decoration: underline;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: inherit;
+        }
+
+        .cookie-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .cookie-btn {
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 0.84rem;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .cookie-btn-accept {
+            background: var(--yellow);
+            color: var(--ink);
+        }
+
+        .cookie-btn-reject {
+            background: transparent;
+            color: #FFFFFF;
+            border-color: #64748B;
+        }
+
+        /* Modais */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.72);
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .modal-backdrop.open {
+            display: flex;
+        }
+
+        .modal-card {
+            background: #FFFFFF;
+            color: var(--ink);
+            width: 100%;
+            max-width: 720px;
+            max-height: 85vh;
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            padding: 20px 24px;
+            background: var(--red);
+            color: #FFFFFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .modal-header h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+        .modal-close {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: #FFFFFF;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .modal-body {
+            padding: 24px;
+            overflow-y: auto;
+            font-size: 0.94rem;
+            color: var(--muted);
+        }
+
+        .modal-body h4 {
+            color: var(--ink);
+            margin: 16px 0 6px 0;
+            font-size: 1rem;
+        }
+
+        .modal-body p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 940px) {
+            .hero-grid,
+            .form-grid,
+            .loc-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            nav {
+                display: none;
+            }
+            .hero {
+                padding: 46px 5% 56px 5%;
+            }
+            section {
+                padding: 54px 5%;
+            }
+            .map-wrap {
+                height: 290px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-city {
+                display: none;
+            }
+            .btn-yellow {
+                padding: 9px 12px;
+                font-size: 0.8rem;
+            }
+            .wa-row {
+                grid-template-columns: 1fr;
+            }
+            .hero-btns .btn-green,
+            .hero-btns .btn-ghost-white {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <div class="topbar" role="region" aria-label="Informações rápidas de funcionamento e contato">
+        <div><strong>Drogaria Rede Menor Preço</strong> • Jardim das Flores, São João da Boa Vista - SP</div>
+        <div><strong>Aberto até às 20:00</strong> • Disk Entrega: <strong>(19) 98986-2037</strong></div>
+    </div>
+
+    <header>
+        <a href="#inicio" class="brand" aria-label="Início - Drogaria Rede Menor Preço">
+            <svg width="136" height="54" viewBox="0 0 260 104" role="img" aria-label="Logotipo Rede Menor Preço Drogarias">
+                <ellipse cx="130" cy="52" rx="116" ry="42" fill="#D62424" stroke="#FFFFFF" stroke-width="4"/>
+                <path d="M 32 45 C 45 14, 198 10, 224 38 L 234 32 L 226 52 L 204 46 L 213 41 C 188 20, 56 22, 42 48 Z" fill="#FACC15"/>
+                <path d="M 228 59 C 215 90, 62 94, 36 66 L 26 72 L 34 52 L 56 58 L 47 63 C 72 84, 204 82, 218 56 Z" fill="#FACC15"/>
+                <text x="95" y="37" fill="#FFFFFF" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="13" font-weight="800" font-style="italic" text-anchor="middle">REDE</text>
+                <text x="130" y="57" fill="#FFFFFF" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="21" font-weight="900" font-style="italic" text-anchor="middle">MENOR PREÇO</text>
+                <text x="148" y="74" fill="#FACC15" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="13" font-weight="800" font-style="italic" text-anchor="middle">DROGARIAS</text>
+            </svg>
+            <div class="brand-meta">
+                <span class="brand-name">DROGARIA</span>
+                <span class="brand-city">São João da Boa Vista - SP</span>
+            </div>
+        </a>
+
+        <nav aria-label="Navegação principal">
+            <a href="#pessoas-felizes">Clientes</a>
+            <a href="#nossa-loja">Nossa Loja</a>
+            <a href="#horarios">Horários</a>
+            <a href="#localizacao">Endereço</a>
+        </nav>
+
+        <a href="https://wa.me/5519989862037?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Disk%20Entrega%20da%20Drogaria%20Rede%20Menor%20Pre%C3%A7o." target="_blank" rel="noopener noreferrer" class="btn-yellow">
+            Disk Entrega
+        </a>
+    </header>
+
+    <main id="conteudo-principal">
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-tag">São João da Boa Vista • Jardim das Flores</div>
+                    <h1>Preços baixos, loja completa e <span>Disk Entrega rápido</span> para sua família.</h1>
+                    <p>Medicamentos, genéricos, fórmulas infantis, fraldas, perfumaria e cremes capilares no balcão ou entregues com agilidade na sua casa.</p>
+
+                    <div class="hero-hours-pill">
+                        <strong>Horário de Funcionamento:</strong> Aberto todos os dias até às <strong>20:00</strong> • Av. Profa. Isette Correa Fontão, 1791 - Sala 1
+                    </div>
+
+                    <div class="hero-btns">
+                        <a href="https://wa.me/5519989862037?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20consultar%20pre%C3%A7os%20e%20entrega." target="_blank" rel="noopener noreferrer" class="btn-green">
+                            Pedir pelo WhatsApp
+                        </a>
+                        <a href="#nossa-loja" class="btn-ghost-white">
+                            Ver Fotos da Loja
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="hero-showcase" aria-label="Fachada e números de Disk Entrega">
+                    <div class="hero-card-media">
+                        <img src="img/fachada.webp" alt="Fachada vermelha da Drogaria Rede Menor Preço Drogarias com Disk Entrega e telefone 19 98986-2037">
+                    </div>
+                    <div class="showcase-body">
+                        <h2>Disk Entrega Oficial</h2>
+                        <p>Fale direto com a equipe pelo WhatsApp para consultar disponibilidade e entrega:</p>
+                        <div class="wa-row">
+                            <a href="https://wa.me/5519989862037?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer" class="wa-chip">
+                                (19) 98986-2037
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- PESSOAS FELIZES -->
+        <section class="happy-section" id="pessoas-felizes">
+            <div class="container">
+                <div class="head">
+                    <span class="eyebrow">No dia a dia</span>
+                    <h2>Quem compra aqui sabe que economiza e é bem atendido</h2>
+                    <p>Atendimento de perto, variedade completa e entrega rápida para facilitar a rotina da sua família.</p>
+                </div>
+
+                <div class="cards-4">
+                    <article class="happy-card">
+                        <div class="photo-frame">
+                            <img src="img/familia-feliz.png" alt="Família sorrindo ao ar livre em clima acolhedor de bairro" loading="lazy">
+                        </div>
+                        <div class="happy-text">
+                            <h3>Família cuidada</h3>
+                            <p>Atendimento atencioso para a rotina de saúde e bem-estar de toda a casa.</p>
+                        </div>
+                    </article>
+
+                    <article class="happy-card">
+                        <div class="photo-frame">
+                            <img src="img/atendimento-feliz.jpg" alt="Profissional de jaleco branco sorrindo no atendimento da farmácia" loading="lazy">
+                        </div>
+                        <div class="happy-text">
+                            <h3>Atendimento cordial</h3>
+                            <p>Equipe pronta para ajudar no balcão e pelo Disk Entrega com agilidade.</p>
+                        </div>
+                    </article>
+
+                    <article class="happy-card">
+                        <div class="photo-frame">
+                            <img src="img/cliente-feliz.jpg" alt="Cliente sorrindo feliz com sacola de compras do dia a dia" loading="lazy">
+                        </div>
+                        <div class="happy-text">
+                            <h3>Economia no dia a dia</h3>
+                            <p>Preços competitivos e variedade completa para o seu bolso.</p>
+                        </div>
+                    </article>
+
+                    <article class="happy-card">
+                        <div class="photo-frame">
+                            <img src="img/mae-bebe-feliz.jpg" alt="Mãe sorrindo feliz com o bebê em ambiente iluminado e acolhedor" loading="lazy">
+                        </div>
+                        <div class="happy-text">
+                            <h3>Cuidado infantil</h3>
+                            <p>Fraldas, fórmulas, lenços e itens essenciais para os pequenos.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOTOS DA FARMÁCIA ENVIADAS POR VOCÊ -->
+        <section id="nossa-loja">
+            <div class="container">
+                <div class="head">
+                    <span class="eyebrow">Fotos reais da loja</span>
+                    <h2>Conheça cada setor da Drogaria Rede Menor Preço</h2>
+                    <p>Prateleiras abastecidas, ofertas sinalizadas e atendimento completo no Jardim das Flores.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <article class="gallery-card">
+                        <div class="photo-frame">
+                            <img src="img/fachada.webp" alt="Fachada principal da Drogaria Rede Menor Preço com Disk Entrega" loading="lazy">
+                        </div>
+                        <div class="gallery-body">
+                            <h3>Fachada e Disk Entrega</h3>
+                            <p>Identificação clara, vitrine ampla e contato direto pelo número 19 98986-2037.</p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <div class="photo-frame">
+                            <img src="img/loja.jpg" alt="Balcão de atendimento e prateleiras de medicamentos com faixa de descontos de até 80%" loading="lazy">
+                        </div>
+                        <div class="gallery-body">
+                            <h3>Balcão e Medicamentos</h3>
+                            <p>Prateleiras organizadas com medicamentos e sinalização de descontos de até 80%.</p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <div class="photo-frame">
+                            <img src="img/ilha.jpg" alt="Ilha central promocional com ofertas e produtos em destaque na loja" loading="lazy">
+                        </div>
+                        <div class="gallery-body">
+                            <h3>Ilha de Ofertas</h3>
+                            <p>Produtos em promoção com destaque visual no centro da loja para facilitar suas compras.</p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <div class="photo-frame">
+                            <img src="img/fraudas.jpg" alt="Prateleira de fórmulas infantis e expositor de fraldas em oferta" loading="lazy">
+                        </div>
+                        <div class="gallery-body">
+                            <h3>Infantil e Fraldas em Oferta</h3>
+                            <p>Fórmulas infantis nas prateleiras e pacotes de fraldas com preço promocional.</p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <div class="photo-frame">
+                            <img src="img/intimus.jpg" alt="Prateleiras de absorventes Intimus e fraldas geriátricas" loading="lazy">
+                        </div>
+                        <div class="gallery-body">
+                            <h3>Higiene e Cuidados Especiais</h3>
+                            <p>Absorventes, fraldas geriátricas e itens de cuidado contínuo.</p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <div class="photo-frame">
+                            <img src="img/cor.jpg" alt="Expositor preto de colorações capilares e produtos de cabelo" loading="lazy">
+                        </div>
+                        <div class="gallery-body">
+                            <h3>Colorações Capilares</h3>
+                            <p>Diversas tonalidades e marcas de coloração organizadas por categoria.</p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <div class="photo-frame">
+                            <img src="img/creme.jpg" alt="Prateleiras com potes de creme de tratamento capilar e oferta" loading="lazy">
+                        </div>
+                        <div class="gallery-body">
+                            <h3>Cremes e Máscaras Capilares</h3>
+                            <p>Potes de hidratação, nutrição e reconstrução capilar com ofertas na loja.</p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <div class="photo-frame">
+                            <img src="img/lencos.jpg" alt="Prateleiras de lenços umedecidos e cuidados infantis" loading="lazy">
+                        </div>
+                        <div class="gallery-body">
+                            <h3>Lenços e Higiene Infantil</h3>
+                            <p>Lenços umedecidos, sabonetes líquidos e linha infantil completa.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="health-note" role="note">
+                    <strong>Aviso Sanitário (ANVISA):</strong> Medicamentos sob prescrição médica só serão dispensados mediante apresentação e conferência da receita válida, conforme legislação sanitária vigente. Se persistirem os sintomas, o médico deverá ser consultado.
+                </div>
+            </div>
+        </section>
+
+        <!-- HORÁRIO DE FUNCIONAMENTO -->
+        <section id="horarios">
+            <div class="container">
+                <div class="head">
+                    <span class="eyebrow">Atendimento e entrega</span>
+                    <h2>Horário de Funcionamento</h2>
+                    <p>Confira quando a loja e o Disk Entrega estão disponíveis para atender você.</p>
+                </div>
+
+                <div class="hours-box">
+                    <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--red);">Drogaria Rede Menor Preço — São João da Boa Vista</h3>
+                    <table class="hours-table" aria-label="Tabela de horários de funcionamento">
+                        <tbody>
+                            <tr>
+                                <th>Atendimento na Loja</th>
+                                <td>Aberto todos os dias até às 20:00 (confirme abertura matinal e domingos/feriados pelo WhatsApp)</td>
+                            </tr>
+                            <tr>
+                                <th>Disk Entrega (WhatsApp)</th>
+                                <td>(19) 98986-2037</td>
+                            </tr>
+                            <tr>
+                                <th>Endereço</th>
+                                <td>Av. Profa. Isette Correa Fontão, 1791 - Sala 1 - Jardim das Flores, São João da Boa Vista - SP, 13876-750</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="https://wa.me/5519989862037?text=Ol%C3%A1!%20Gostaria%20de%20confirmar%20o%20hor%C3%A1rio%20e%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer" class="btn-green">
+                        Confirmar Horário ou Pedir no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO LGPD -->
+        <section class="form-section" id="orcamento">
+            <div class="container form-grid">
+                <div>
+                    <span class="eyebrow">Orçamento rápido</span>
+                    <h2 style="font-size: clamp(1.7rem, 3.5vw, 2.3rem); font-weight: 900; margin-bottom: 14px;">Peça ou tire sua dúvida em segundos</h2>
+                    <p style="color: var(--muted); margin-bottom: 18px;">Preencha apenas o necessário para abrir a conversa no WhatsApp com o seu pedido pronto.</p>
+                    <ul style="color: var(--muted); padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 0.94rem;">
+                        <li><strong>LGPD:</strong> coletamos apenas seu nome, bairro (opcional) e o produto desejado.</li>
+                        <li><strong>Sem banco de dados externo:</strong> os dados não ficam salvos na internet.</li>
+                        <li><strong>Receitas médicas:</strong> envie a foto diretamente na conversa do WhatsApp com a equipe.</li>
+                    </ul>
+                </div>
+
+                <div class="form-card">
+                    <form id="lgpd-form" novalidate>
+                        <div class="field">
+                            <label for="nome">Seu nome *</label>
+                            <input type="text" id="nome" name="nome" placeholder="Ex.: Ana Paula" required autocomplete="name">
+                        </div>
+                        <div class="field">
+                            <label for="bairro">Bairro para entrega (opcional)</label>
+                            <input type="text" id="bairro" name="bairro" placeholder="Ex.: Jardim das Flores">
+                        </div>
+                        <div class="field">
+                            <label for="pedido">Produto ou medicamento desejado *</label>
+                            <textarea id="pedido" name="pedido" placeholder="Ex.: Fralda, fórmula infantil, creme capilar..." required></textarea>
+                        </div>
+                        <div class="consent-row">
+                            <input type="checkbox" id="consent-box" required>
+                            <label for="consent-box" style="font-weight: 500; margin: 0;">
+                                Concordo com o uso destes dados exclusivamente para o atendimento via WhatsApp, de acordo com a
+                                <button type="button" onclick="openModal('modal-privacidade')">Política de Privacidade</button> (LGPD).
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-green" style="width: 100%; justify-content: center;">
+                            Enviar Pedido para o WhatsApp
+                        </button>
+                        <p id="form-msg" class="form-msg" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOCALIZAÇÃO E MAPA -->
+        <section id="localizacao">
+            <div class="container loc-grid">
+                <div>
+                    <span class="eyebrow">Localização</span>
+                    <h2 style="font-size: clamp(1.7rem, 3.5vw, 2.3rem); font-weight: 900; margin-bottom: 12px;">Onde estamos em São João da Boa Vista</h2>
+                    <p style="color: var(--muted);">Venha até a loja ou peça pelo Disk Entrega.</p>
+
+                    <ul class="loc-list">
+                        <li><strong>Endereço:</strong> Av. Profa. Isette Correa Fontão, 1791 - Sala 1 - Jardim das Flores, São João da Boa Vista - SP, 13876-750</li>
+                        <li><strong>Horário:</strong> Aberto até às 20:00</li>
+                        <li><strong>Telefones / WhatsApp:</strong> (19) 98986-2037</li>
+                    </ul>
+
+                    <div class="google-box">
+                        <div>
+                            <strong style="font-size: 0.98rem;">Perfil Oficial no Google</strong>
+                            <p style="font-size: 0.86rem; color: var(--muted); margin: 0;">Avaliação 5,0 ★ nas críticas públicas do Google Maps.</p>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Drogaria+Rede+Menor+Preco+Av.+Profa.+Isette+Correa+Fontao+1791+Sao+Joao+da+Boa+Vista+SP" target="_blank" rel="noopener noreferrer" style="color: var(--red); font-weight: 800; font-size: 0.88rem; text-decoration: underline;">
+                            Abrir no Google Maps ↗
+                        </a>
+                    </div>
+                </div>
+
+                <div class="map-wrap">
+                    <iframe
+                        title="Mapa da Drogaria Rede Menor Preço em São João da Boa Vista"
+                        src="https://maps.google.com/maps?q=Av.%20Profa.%20Isette%20Correa%20Font%C3%A3o,%201791,%20S%C3%A3o%20Jo%C3%A3o%20da%20Boa%20Vista%20-%20SP&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- BOTÃO FLUTUANTE ARRASTÁVEL DO WHATSAPP + MENSAGEM INICIAL -->
+    <div id="wa-float-dock" class="wa-float-dock" role="region" aria-label="Atalho flutuante do WhatsApp">
+        <div id="wa-greeting-bubble" class="wa-greeting-bubble" role="status" aria-live="polite">
+            <button type="button" id="wa-greeting-close" class="wa-greeting-close" aria-label="Fechar mensagem de boas-vindas">&times;</button>
+            Olá, bem-vindo! Precisa de ajuda ou Disk Entrega?
+        </div>
+        <button
+            type="button"
+            id="wa-float-btn"
+            class="wa-float-btn"
+            aria-label="Falar com a Drogaria Rede Menor Preço no WhatsApp (arraste para mover ou clique para abrir)"
+            title="WhatsApp (19) 98986-2037 — Arraste ou clique">
+            <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+                <path d="M16 3C8.82 3 3 8.82 3 16c0 2.3.6 4.54 1.74 6.52L3.1 29l6.66-1.75A12.92 12.92 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23.8c-1.97 0-3.9-.53-5.58-1.53l-.4-.24-3.95 1.04 1.05-3.85-.26-.41A10.74 10.74 0 0 1 5.2 16C5.2 10.05 10.05 5.2 16 5.2S26.8 10.05 26.8 16 21.95 26.8 16 26.8zm5.92-8.04c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.52-.16-.74.16-.22.32-.85 1.06-1.04 1.28-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.74-1.79-1.02-2.45-.27-.64-.54-.56-.74-.57h-.63c-.21 0-.56.08-.85.4-.3.32-1.12 1.1-1.12 2.68s1.15 3.11 1.31 3.33c.16.21 2.26 3.45 5.47 4.84.76.33 1.36.53 1.82.67.77.24 1.46.21 2.01.13.61-.09 1.92-.78 2.19-1.54.27-.75.27-1.4.19-1.54-.08-.13-.29-.21-.61-.37z"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- FOOTER COM DADOS LEGAIS E JURÍDICOS -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Drogaria Rede Menor Preço</h3>
+                <p>Av. Profa. Isette Correa Fontão, 1791 - Sala 1<br>Jardim das Flores, São João da Boa Vista - SP<br>CEP: 13876-750<br>Aberto até às 20:00</p>
+            </div>
+            <div class="footer-col">
+                <h3>Disk Entrega</h3>
+                <a href="https://wa.me/5519989862037" target="_blank" rel="noopener noreferrer">WhatsApp: (19) 98986-2037</a>
+            </div>
+            <div class="footer-col">
+                <h3>LGPD e Documentos</h3>
+                <button type="button" onclick="openModal('modal-privacidade')">Política de Privacidade (LGPD)</button>
+                <button type="button" onclick="openModal('modal-termos')">Termos de Serviço</button>
+                <button type="button" onclick="openModal('modal-reembolso')">Política de Troca e Reembolso</button>
+                <button type="button" onclick="showCookieBanner()">Preferências de Cookies</button>
+            </div>
+        </div>
+
+        <div class="legal-strip" role="region" aria-label="Dados legais da empresa">
+            <strong>Dados Legais & Regulatórios:</strong>
+            Razão Social: [Preencher Razão Social] •
+            CNPJ: [00.000.000/0001-00] •
+            Farmacêutico(a) Responsável: [Nome — CRF-SP 00.000] •
+            AFE/ANVISA: [Nº da AFE] •
+            Licença Sanitária: [Nº da Licença — São João da Boa Vista/SP].
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Drogaria Rede Menor Preço — São João da Boa Vista/SP. Todos os direitos reservados.</span>
+            <span>Desenvolvido por T.I. Solution</span>
+        </div>
+    </footer>
+
+    <!-- BANNER DE COOKIES LGPD -->
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies e privacidade">
+        <div class="cookie-text">
+            <strong>Privacidade e Cookies (LGPD):</strong> Usamos apenas cookies essenciais ao funcionamento do site. Nenhum script de rastreamento é carregado sem o seu consentimento. Consulte a
+            <button type="button" onclick="openModal('modal-privacidade')">Política de Privacidade</button>.
+        </div>
+        <div class="cookie-actions">
+            <button type="button" class="cookie-btn cookie-btn-reject" onclick="setCookieConsent('essential')">Apenas Essenciais</button>
+            <button type="button" class="cookie-btn cookie-btn-accept" onclick="setCookieConsent('all')">Aceitar</button>
+        </div>
+    </div>
+
+    <!-- MODAIS -->
+    <div class="modal-backdrop" id="modal-privacidade" role="dialog" aria-modal="true" aria-labelledby="t-priv">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="t-priv">Política de Privacidade (LGPD)</h3>
+                <button type="button" class="modal-close" onclick="closeModal('modal-privacidade')" aria-label="Fechar">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Última atualização:</strong> Novembro de 2026.</p>
+                <h4>1. Coleta e Finalidade</h4>
+                <p>Coletamos apenas nome, bairro (opcional) e descrição do produto para abrir o atendimento solicitado via WhatsApp.</p>
+                <h4>2. Cookies</h4>
+                <p>Não ativamos scripts de rastreamento sem autorização prévia. Apenas a escolha de cookies é salva no navegador.</p>
+                <h4>3. Direitos do Titular</h4>
+                <p>Para solicitar informações ou exclusão de dados, fale pelo WhatsApp <strong>(19) 98986-2037</strong>.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-backdrop" id="modal-termos" role="dialog" aria-modal="true" aria-labelledby="t-termos">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="t-termos">Termos de Serviço</h3>
+                <button type="button" class="modal-close" onclick="closeModal('modal-termos')" aria-label="Fechar">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h4>1. Uso Institucional</h4>
+                <p>Este site divulga os canais de atendimento, localização, horários e produtos da Drogaria Rede Menor Preço em São João da Boa Vista - SP.</p>
+                <h4>2. Receitas e Normas Sanitárias</h4>
+                <p>Medicamentos sujeitos a prescrição seguem as exigências sanitárias vigentes e a conferência de receita válida.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-backdrop" id="modal-reembolso" role="dialog" aria-modal="true" aria-labelledby="t-reemb">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="t-reemb">Política de Troca e Reembolso</h3>
+                <button type="button" class="modal-close" onclick="closeModal('modal-reembolso')" aria-label="Fechar">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h4>1. Trocas e Devoluções</h4>
+                <p>Em compras à distância, aplica-se o prazo legal de até 7 dias corridos para produtos lacrados e sem violação, com cupom fiscal.</p>
+                <h4>2. Segurança Sanitária</h4>
+                <p>Produtos com lacre violado ou sujeitos a controle sanitário específico seguem as normas da ANVISA e do Código de Defesa do Consumidor, havendo troca ou reembolso em caso de erro de entrega ou vício.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Botão flutuante arrastável do WhatsApp com mensagem inicial temporária
+        (function () {
+            const dock = document.getElementById('wa-float-dock');
+            const btn = document.getElementById('wa-float-btn');
+            const bubble = document.getElementById('wa-greeting-bubble');
+            const closeBubbleBtn = document.getElementById('wa-greeting-close');
+            if (!dock || !btn) return;
+
+            const waUrl = 'https://wa.me/5519989862037?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Drogaria%20Rede%20Menor%20Pre%C3%A7o%20e%20gostaria%20de%20atendimento.';
+            let isPointerDown = false;
+            let hasDragged = false;
+            let startX = 0;
+            let startY = 0;
+            let originLeft = 0;
+            let originTop = 0;
+            let customPosition = false;
+            let hideBubbleTimer = null;
+
+            function hideBubble() {
+                if (!bubble) return;
+                clearTimeout(hideBubbleTimer);
+                bubble.classList.add('hidden');
+            }
+
+            if (bubble) {
+                hideBubbleTimer = setTimeout(hideBubble, 6000);
+                bubble.addEventListener('click', (e) => {
+                    if (e.target === closeBubbleBtn) return;
+                    hideBubble();
+                    window.open(waUrl, '_blank', 'noopener,noreferrer');
+                });
+            }
+
+            if (closeBubbleBtn) {
+                closeBubbleBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    hideBubble();
+                });
+            }
+
+            function clampPosition(left, top) {
+                const margin = 12;
+                const rect = dock.getBoundingClientRect();
+                const maxLeft = Math.max(margin, window.innerWidth - rect.width - margin);
+                const maxTop = Math.max(margin, window.innerHeight - rect.height - margin);
+                return {
+                    left: Math.min(Math.max(margin, left), maxLeft),
+                    top: Math.min(Math.max(margin, top), maxTop)
+                };
+            }
+
+            btn.addEventListener('pointerdown', (e) => {
+                if (e.button !== undefined && e.button !== 0 && e.pointerType === 'mouse') return;
+                isPointerDown = true;
+                hasDragged = false;
+                startX = e.clientX;
+                startY = e.clientY;
+
+                const rect = dock.getBoundingClientRect();
+                originLeft = rect.left;
+                originTop = rect.top;
+
+                dock.style.right = 'auto';
+                dock.style.bottom = 'auto';
+                dock.style.left = `${originLeft}px`;
+                dock.style.top = `${originTop}px`;
+                customPosition = true;
+
+                dock.classList.add('dragging');
+                btn.setPointerCapture(e.pointerId);
+            });
+
+            btn.addEventListener('pointermove', (e) => {
+                if (!isPointerDown) return;
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+
+                if (!hasDragged && Math.hypot(dx, dy) > 6) {
+                    hasDragged = true;
+                }
+
+                if (hasDragged) {
+                    const clamped = clampPosition(originLeft + dx, originTop + dy);
+                    dock.style.left = `${clamped.left}px`;
+                    dock.style.top = `${clamped.top}px`;
+                }
+            });
+
+            function finishPointer(e) {
+                if (!isPointerDown) return;
+                isPointerDown = false;
+                dock.classList.remove('dragging');
+                if (btn.hasPointerCapture && btn.hasPointerCapture(e.pointerId)) {
+                    btn.releasePointerCapture(e.pointerId);
+                }
+                if (!hasDragged) {
+                    hideBubble();
+                    window.open(waUrl, '_blank', 'noopener,noreferrer');
+                }
+            }
+
+            btn.addEventListener('pointerup', finishPointer);
+            btn.addEventListener('pointercancel', finishPointer);
+
+            window.addEventListener('resize', () => {
+                if (!customPosition) return;
+                const rect = dock.getBoundingClientRect();
+                const clamped = clampPosition(rect.left, rect.top);
+                dock.style.left = `${clamped.left}px`;
+                dock.style.top = `${clamped.top}px`;
+            });
+        })();
+
+        const cookieBanner = document.getElementById('cookie-banner');
+        if (!localStorage.getItem('rmp_consent_v3')) {
+            cookieBanner.classList.add('show');
+        }
+
+        function setCookieConsent(val) {
+            localStorage.setItem('rmp_consent_v3', val);
+            cookieBanner.classList.remove('show');
+        }
+
+        function showCookieBanner() {
+            cookieBanner.classList.add('show');
+        }
+
+        function openModal(id) {
+            const m = document.getElementById(id);
+            if (!m) return;
+            m.classList.add('open');
+            const btn = m.querySelector('.modal-close');
+            if (btn) btn.focus();
+        }
+
+        function closeModal(id) {
+            const m = document.getElementById(id);
+            if (!m) return;
+            m.classList.remove('open');
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-backdrop.open').forEach(m => m.classList.remove('open'));
+            }
+        });
+
+        document.querySelectorAll('.modal-backdrop').forEach(b => {
+            b.addEventListener('click', e => {
+                if (e.target === b) b.classList.remove('open');
+            });
+        });
+
+        document.getElementById('lgpd-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value.trim();
+            const bairro = document.getElementById('bairro').value.trim();
+            const pedido = document.getElementById('pedido').value.trim();
+            const ok = document.getElementById('consent-box').checked;
+            const msg = document.getElementById('form-msg');
+
+            if (!nome || !pedido) {
+                msg.style.display = 'block';
+                msg.style.color = '#C81E1E';
+                msg.textContent = 'Preencha seu nome e o produto desejado.';
+                return;
+            }
+            if (!ok) {
+                msg.style.display = 'block';
+                msg.style.color = '#C81E1E';
+                msg.textContent = 'Marque o aceite da Política de Privacidade (LGPD) para prosseguir.';
+                return;
+            }
+
+            let texto = `Olá, Drogaria Rede Menor Preço! Meu nome é ${nome}.`;
+            if (bairro) texto += ` Bairro: ${bairro}.`;
+            texto += ` Gostaria de consultar/pedir: ${pedido}`;
+
+            msg.style.display = 'block';
+            msg.style.color = '#15803D';
+            msg.textContent = 'Abrindo o WhatsApp da drogaria...';
+            window.open(`https://wa.me/5519989862037?text=${encodeURIComponent(texto)}`, '_blank', 'noopener,noreferrer');
+        });
+    </script>
+</body>
+</html>
